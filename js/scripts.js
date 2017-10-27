@@ -5,23 +5,27 @@
 
 
 var counter = function(input) {
-  var inputArray = input.split();
-  var beepBoop = [0, 1]
-  var output = [];
-  for (var i =1; i <= inputArray; i++) {
-    for (var b=0; b < beepBoop.length; i++){
-      debugger
-      if ((i % 3) === 0){
-        output.push(" I'm sorry Dave, I'm afraid I can't do that")
-      } else if (inputArray[i] === beepBoop[0]) {
-        output.push("Beep")
-      } else if (inputArray[i] === beepBoop[1]) {
+  var inputArray = [];
+  // var beepBoop = [0, 1]
+  for (var i = 0; i <= input; i++) {
+    inputArray.push(i);
+  }
+
+  for (var index = 0; index < inputArray.length; index += 1) {
+    if ((index % 3) === 0){
+    // inputArray[index] = " I'm sorry Dave, I'm afraid I can't do that";
+    index = " I'm sorry Dave, I'm afraid I can't do that");
+    } else if (index == beepBoop[0]) {
+        // inputArray[i] = "Boop";
         output.push("Boop");
+      } else if (index == beepBoop[1]) {
+        // inputArray[i] = "Beep";
+        output.push("Beep");
       } else {
-        output.push(i);
+        output.push(index);
       }
-    }
-    alert(output);
+      console.log(output);
+    };
   };
 };
 
