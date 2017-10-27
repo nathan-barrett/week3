@@ -4,22 +4,25 @@
     <script src="js/jquery.js"></script>
     <script src="js/scripts.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
     <meta charset="utf-8">
     <title>Welcome aboard the Discovery One!</title>
   </head>
   <body>
     <div class="container">
-      <h1 class="jumbotron">HAL 3000 would like to count for you.</h1>
-      <form id="count-form">
-        <div class="form-group">
-          <label for="count-by">Enter number below so HAL can gain sentience</label>
-          <input type="number" class="form-control" id="count-to" placeholder="I...must...count..">
+        <img src="img/header.jpg" alt="Card image">
+        <h1 class="header-text">HAL 3000 would like to count for you.</h1>
+      <div class="formBody">
+        <form id="count-form">
+          <div class="form-group">
+            <label for="count-by">Enter a number below so HAL can gain sentience</label>
+            <input type="number" class="form-control" id="count-to" placeholder="I...must...count..">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit-or-Die</button>
+        </form>
+        <div class="result">
+          <p id="Beep-Boop"></p>
         </div>
-        <button type="submit" class="btn btn-primary">Submit-or-Die</button>
-      </form>
-      <div class="result">
-        <p id="Beep-Boop"></p>
       </div>
     </div>
   </body>

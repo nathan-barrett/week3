@@ -1,8 +1,8 @@
-# Roman Numeral Generator
+# HAL 3000 counter
 
-#### Translates your garbage numbers into roman numerals, 10-26-2017
+#### Couting with HAL 3000
 
-#### By **Luke Bertram** & **Nathan Barrett**
+#### By **Nathan Barrett**
 
 ## Specifications
 * Able to count up to a specified number input by user
@@ -15,45 +15,42 @@
 
 * Able to change all 1's with Beep
   * Input: 10
-  * Output: BeepBoop
+  * Output: Beep-Boop
 
 * Any number that is divisible by three is replaced with: "I'm sorry Dave I cannot do that"
   * Input: 9
-  * Output: "I'm sorry Dave, I'm afriad I can't do that"
+  * Output: "I'm sorry Dave, I'm afraid I can't do that"
 
 ## Description
 
-It does what I said it done!
+Web Application that can fufill the specifications listed above.
 
 ## Setup/Installation Requirements
 
-<!-- For greatest ease of use, simply visit [this website](http://lukebertram.github.io/track-suggester) in your web browser of choice. However, if you're feeling frisky, you can also use the following steps to clone the project from [GitHub](http://github.com) and run it locally on your own computer:
+Easiest way to visit the page would be to go to http://www.nathan-barrett.github.io/week3
 
-* Visit the github page for [this project](http://github.com/lukebertram/track-suggester)
-* Click the "Clone or Download" button and copy the address found there. Alternatively, just copy this address to your clipboard: https://github.com/lukebertram/track-suggester.git
-* Access your system's command line interface (_ie Terminal, for MacOS Users_) and navigate to your home directory by entering the following magical spell into your command line (note: do not enter the '$' character):
+
+* Visit the github page for https://github.com/nathan-barrett/week3
+* Click the "Clone or Download" button and copy the address found there.
+* Access your system's terminal and navigate to your home directory by entering the following:
 >$cd ~
 
-* Next, cast the following, more advanced spell:  
->$git clone https://github.com/lukebertram/track-suggester.git
+* Next,  
+>$git clone https://github.com/nathan-barrett/week3
 
 * Finally, open the project in your system's default web browser with the following final incantation:
->$open track-suggester/index.html -->
+>$open week3/index.html -->
 
 ## Known Bugs
 
 
-
-## Support and contact details
-
-
-
 ## Technologies Used
-
-The bulk of this project consists of a radio-button-heavy HTML form and branching logic written in JQuery/JavaScript. When the form is submitted, the usual post request is suppressed by javascript, and the answers are gathered from the form via JQuery.
+* JavaScript, jQuery
+* html
+* CSS, bootstrap
 
 ### License
 
 MIT License
 
-Copyright (c) 2017 Luke Bertram
+Copyright (c) 2017 Nathan Barrett
