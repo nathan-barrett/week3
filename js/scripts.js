@@ -1,54 +1,29 @@
 //business logic//
-var zero = /[0]/;
-    one = /[1]/;
-    oneZero = /[01]/;
-var inputArray = [];
-
-//function to create an array of strings of the numbers counting up to userInput//
-var counter = function(inputNumValue) {
-  var userArray = [];
-  for (index = 1; index <= inputNumValue; index++) {
-    userArray.push(index.toString());
+var outputArray = [];
+function counter(number) {
+  for (var index = 0; index <= number; index++){
+    var inputString = index.toString();
+    if (inputString.includes("1") === true) {
+      outputArray.push("Boop!");
+    } if (inputString.includes("0") === true) {
+      outputArray.push("Beep!")
+    } else if (index % 3 === 0 && 0 < index) {
+        outputArray.push(" I'm sorry Dave, I'm afraid I can't do that");
+    } if ((inputString.includes("1") === false) && (inputString.includes("0") === false) && (index % 3 !== 0)) {
+      outputArray.push(" " + index);
+    }
   }
-  return userArray;
-};
-//function to search for regex and change 1 and 0 to Boop/Beep and numbers divided by 3//
-var numTest = function(input) {
-  if ((parseInt(input) % 3 === 0) && (parseInt(input) !== 0)) {
-    return " I'm sorry Dave, I'm afraid I can't do that"
-  } else if (!oneZero.test(input)) {
-    return input;
-  } else if (!zero.test(input)) {
-    return "Boop"
-  } else if (!one.test(input)){
-    return "Beep";
-  } else {
-    return "Beep-Boop"
-  }
+  return outputArray;
 }
-// funcation to copy an array and run the numTest function on it//
-var outputToString = function(numArray) {
-  var outputString = numArray.map(function(number) {
-    return numTest(number);
-  });
-  return outputString.join(", ");
-};
-//function to put all of the functions together to get the final output//
-var finalOutput = function(userInput) {
-  var inputArray = userInput.split("");
-    return outputToString(counter(parseInt(userInput)));
-  };
-
 //UI Logic//
 $(document).ready(function(){
   $("form#count-form").submit(function(event){
     event.preventDefault();
-    var countTo = $("input#count-to").val();
-    var results = finalOutput(countTo);
+    var countTo = parseInt($("input#count-to").val());
+    var results = counter(countTo);
     $("#Beep-Boop").empty();
-    resultArray = results.split();
-    resultArray.forEach(function(result){
-      $("#Beep-Boop").text(resultArray);
+    outputArray.forEach(function(output) {
+      $("#Beep-Boop").text(outputArray);
     })
   });
 });
