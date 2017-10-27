@@ -3,6 +3,8 @@ var zero = /[0]/;
     one = /[1]/;
     oneZero = /[01]/;
 var inputArray = [];
+
+//function to create an array of strings of the numbers counting up to userInput//
 var counter = function(inputNumValue) {
   var userArray = [];
   for (index = 1; index <= inputNumValue; index++) {
@@ -10,12 +12,7 @@ var counter = function(inputNumValue) {
   }
   return userArray;
 };
-var outputToString = function(numArray) {
-  var outputString = numArray.map(function(number) {
-    return numTest(number);
-  });
-  return outputString.join(", ");
-};
+//function to search for regex and change 1 and 0 to Boop/Beep and numbers divided by 3//
 var numTest = function(input) {
   if ((parseInt(input) % 3 === 0) && (parseInt(input) !== 0)) {
     return " I'm sorry Dave, I'm afraid I can't do that"
@@ -29,6 +26,14 @@ var numTest = function(input) {
     return "Beep-Boop"
   }
 }
+// funcation to copy an array and run the numTest function on it//
+var outputToString = function(numArray) {
+  var outputString = numArray.map(function(number) {
+    return numTest(number);
+  });
+  return outputString.join(", ");
+};
+//function to put all of the functions together to get the final output//
 var finalOutput = function(userInput) {
   var inputArray = userInput.split("");
     return outputToString(counter(parseInt(userInput)));
@@ -43,7 +48,7 @@ $(document).ready(function(){
     $("#Beep-Boop").empty();
     resultArray = results.split();
     resultArray.forEach(function(result){
-      $("#Beep-Boop").append("<li>" + result + "</li>")
+      $("#Beep-Boop").text(resultArray);
     })
   });
 });
