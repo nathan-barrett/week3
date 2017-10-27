@@ -5,28 +5,32 @@ var zero = /[0]/;
 var inputArray = [];
 
 
+var countToNumber = function(inputNumValue) {
+  var countArray = [];
+  for (i = 0; i <= inputNumValue; i++) {
+    countArray.push(i.toString());
+  }
+  return countArray;
+};
+
 var numTest = function(input) {
   if ((parseInt(number) % 3 === 0) && (parseInt(number) !== 0)) {
     inputArray.push(" I'm sorry Dave, I'm afraid I can't do that");
   } else if (!oneZero.test(input)) {
-    return number;
-  } else if (!zeroRegex.test(number)) {
+    return input;
+  } else if (!zero.test(number)) {
     return "Boop"
-  } else if (!oneRegex.test(number)){
+  } else if (!one.test(number)){
     return "Beep";
   } else {
     return "Beep-Boop"
+  }
+}
+var output = function(userInput) {
+  var inputArray = userInput.split("");
+    return outputStringify(numTest(parseInt(userInput)));
   };
-};
 
-      } if (inputArray[arrayIndex] == 0) {
-        inputArray[arrayIndex] = "Beep";
-      } else if (inputArray[arrayIndex] == 1) {
-        inputArray[arrayIndex] = "Boop";
-      } else if ((inputArray[arrayIndex] % 3) === 0){
-        inputArray[arrayIndex] = " I'm sorry Dave, I'm afraid I can't do that";
-    }
-    return inputArray;
     console.log(inputArray);
   }
 
