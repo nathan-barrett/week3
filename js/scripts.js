@@ -21,7 +21,7 @@ $(document).ready(function(){
     event.preventDefault();
     var countTo = parseInt($("input#count-to").val());
     var results = counter(countTo);
-    $("#Beep-Boop").empty();
-    $("#Beep-Boop").text(outputArray);
+    $("#results").empty();
+    $("#Beep-Boop").text(outputArray).fadeIn();
     })
   });
