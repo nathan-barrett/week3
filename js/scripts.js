@@ -23,5 +23,6 @@ $(document).ready(function(){
     var results = counter(countTo);
     $("#results").empty();
     $("#Beep-Boop").text(outputArray).fadeIn();
+    outputArray = [];
     })
   });
